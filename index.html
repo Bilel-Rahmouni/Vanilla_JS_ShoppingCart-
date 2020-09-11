@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <title>Shopping cart</title>
+</head>
+<div class="navBar">
+    <a href="#">logo</a>
+    <a href="#">Wish-list</a>
+    <a href="#">Best-sales</a>
+    <a href="#"><input type="text" class="searchInput" placeholder="Search...">
+        <i class="fas navSearch fa-search"></i>
+    </a>
+    <a href="#">
+        <div class="searchInputDiv"><span class="num navBarCart itemsInCart"></span><i class="fa fa-shopping-cart"></i>
+        </div>
+    </a>
+</div>
+<div class="searchDiv"></div>
+<div class="productsContainer">
+    <div class="cart">
+        <div>
+            <img class="productImg" src="/res/Air.jpg" alt="..."></div>
+        <div class="details">
+            <h3 class="productName">nike air</h3>
+            <span class="num price">270$</span>
+            <button class="btn addToCartBtn">add to cart</button>
+        </div>
+    </div>
+    <div class="cart">
+        <div>
+            <img class="productImg" src="/res/Converse.jpg" alt="..."></div>
+        <div class="details">
+            <h3 class="productName">Converse</h3>
+            <span class="num price">120$</span>
+            <button class="btn addToCartBtn">add to cart</button>
+        </div>
+    </div>
+    <div class="cart">
+        <div>
+            <img class="productImg" src="/res/Puzzle.jpg" alt="..."></div>
+        <div class="details">
+            <h3 class="productName">Puzzle</h3>
+            <span class="num price">320$</span>
+            <button class="btn addToCartBtn">add to cart</button>
+        </div>
+    </div>
+    <div class="cart">
+        <div>
+            <img class="productImg" src="/res/Running.png" alt="..."></div>
+        <div class="details">
+            <h3 class="productName">Running</h3>
+            <span class="num price">300$</span>
+            <button class="btn addToCartBtn">add to cart</button>
+        </div>
+    </div>
+</div>
+<div class="commande">
+    <div class="commandeProducts carts">
+        <h1><i class="fas fa-shopping-cart"></i><span class="num commandeCart itemsInCart"></span> </h1>
+        <div class="commandeProductsContainer productsContainer"></div>
+    </div>
+
+    <div class="commandeProducts ">
+        <h1>Total amount:<span class="num totalAmount"></span></h1>
+        <button class="btn paymentBtn">Go to payment</button>
+    </div>
+</div>
+
+
+<body>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

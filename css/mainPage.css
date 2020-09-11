@@ -1,0 +1,142 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.6;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+section {
+  padding: 7em 0;
+}
+.container {
+  width: 85%;
+  max-width: 65em;
+  margin: 0 auto;
+}
+.split {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.split > * {
+  flex-basis: 30%;
+  min-width: 15em;
+}
+.spacing > * + * {
+  margin-top: var(--spacer, 2rem);
+}
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--clr-text, white);
+  text-transform: uppercase;
+  padding: 0.5em 1.25em;
+  font-size: 1.125rem;
+  background: var(--clr-accent, blue);
+  border-radius: 0.25em;
+  transition: transform 250ms ease-in-out, opacity 250ms linear;
+}
+.btn:hover,
+.btn:focus {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+.primary-title {
+  font-size: 4rem;
+  font-size: clamp(3rem, (5vw+1rem), 4.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+.section-title {
+  text-align: center;
+  font-size: clamp(2.5rem, (5vw+1rem), 4rem);
+  line-height: 1.2;
+  background: -webkit-linear-gradient(red, blue);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 5rem;
+}
+.hero {
+  color: white;
+  text-align: center;
+  padding: 15em 0;
+  background-image: url(../res/cover.jpg), radial-gradient(#444, #111);
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+}
+.featured__item {
+  position: relative;
+  transform: scale(0.85);
+  transition: transform 250ms ease-in-out;
+  text-decoration: none;
+  color: #333;
+  text-align: center;
+  line-height: 1.2;
+}
+.featured__item:hover,
+.featured__item:focus {
+  transform: scale(1);
+}
+.featured__item:hover .featured__details,
+.featured__item:focus .featured__details {
+  opacity: 1;
+  text-shadow: 0 0 1em rgba(255, 255, 255, 1);
+}
+.featured__item::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  padding: 75% 75% 0 0;
+  background: #2193b0;
+  border-radius: 50%;
+  z-index: -1;
+}
+.price {
+  display: block;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+.featured__details {
+  opacity: 0;
+  transition: opacity 250ms linear;
+}
+.product {
+  padding: 3em;
+  margin-bottom: 2em;
+  text-align: center;
+}
+.product__title {
+  font-size: 4rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.product__image {
+  width: 100vw;
+  margin: -5em 0 0 0;
+}
+.hero {
+  --clr-accent: #faa700;
+}
+@media (max-width: 45em) {
+  .product__image {
+    float: left;
+    width: 50%;
+  }
+}
